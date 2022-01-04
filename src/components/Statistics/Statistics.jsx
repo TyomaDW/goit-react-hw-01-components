@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { setBackgroundColorRandom } from '../../helpers/hexColorRandom';
 
 import styles from './Statistics.module.css';
 
@@ -22,12 +23,6 @@ const Statistics = ({ title, stats }) => {
     </section>
   );
 };
-
-const setBackgroundColorRandom = () =>
-  '#' +
-  Math.floor(Math.random() * 2 ** 24)
-    .toString(16)
-    .padStart(6, '0');
 
 Statistics.defaultProps = {
   title: '',
